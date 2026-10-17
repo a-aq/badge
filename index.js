@@ -52,10 +52,22 @@ class DiscordVoiceBot {
                 this.sessionId = d.session_id;
                 console.log("Logged in! Setting status and joining voice channel...");
 
-                // Fake Game Status
+                // Verified Game Status with Time Elapsed
                 this.ws.send(JSON.stringify({
                     op: 3,
-                    d: { since: null, game: { name: "Clash Royale", type: 0 }, status: "dnd", afk: false }
+                    d: { 
+                        since: Date.now(), 
+                        activities: [{ 
+                            name: "Clash Royale", 
+                            type: 0, 
+                            application_id: "898952848248389714", // Discord's verified ID for Clash Royale
+                            timestamps: {
+                                start: Date.now() // This creates the "00:00 elapsed" timer
+                            }
+                        }], 
+                        status: "dnd", 
+                        afk: false 
+                    }
                 }));
 
                 // Join Voice
