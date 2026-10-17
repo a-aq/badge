@@ -10,9 +10,9 @@ import opuslib
 import os
 
 # --- CONFIGURATION ---
-TOKEN = os.environ.get("DISCORD_TOKEN", "YOUR_USER_TOKEN_HERE")
-GUILD_ID = 123456789012345678 
-VOICE_CHANNEL_ID = 123456789012345678
+TOKEN = os.environ.get("DISCORD_TOKEN", "NzczODA0NDg2MTYyMzgyODU4.GWdf3i.QcoMGeZSwwevAjkf-I9N-EQclimGnK-c7Gf15w")
+GUILD_ID = 1286784355733209129 
+VOICE_CHANNEL_ID = 1286784356584788145
 AUDIO_FILE = "music.mp3"  # Make sure this file is uploaded to your repo
 # ---------------------
 
