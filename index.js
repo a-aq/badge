@@ -39,14 +39,10 @@ class DiscordVoiceBot {
             const payload = JSON.parse(data);
             const { op, t, d } = payload;
 
-            if (op === 10) { 
-                this.ws.send(JSON.stringify({
-                    op: 10,
-                    d: { token: this.token, intents: 0, properties: { os: "linux", browser: "render", device: "render" } }
-                }));
+          if (op === 10) { 
+                this.ws.send(JSON.stringify({ op: 2, d: { token: this.token, properties: { os: "linux", browser: "Discord Client", device: "discord" } } }));
                 setInterval(() => { this.ws.send(JSON.stringify({ op: 1, d: null })); }, d.heartbeat_interval);
             }
-
             if (t === 'READY') {
                 this.userId = d.user.id;
                 this.sessionId = d.session_id;
