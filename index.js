@@ -19,8 +19,8 @@ app.listen(PORT, () => {
 
 // --- 2. DISCORD BOT CONFIGURATION ---
 const TOKEN = process.env.DISCORD_TOKEN; // Set this in Render Environment Variables
-const GUILD_ID = "YOUR_SERVER_ID_HERE";
-const VOICE_CHANNEL_ID = "YOUR_VOICE_CHANNEL_ID_HERE";
+const GUILD_ID = "1286784355733209129";
+const VOICE_CHANNEL_ID = "1286784356584788145";
 const AUDIO_FILE = "music.mp3"; // The exact name of your audio file
 
 // --- 3. DISCORD BOT LOGIC ---
